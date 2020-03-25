@@ -36,12 +36,12 @@ a {
     font-size: 1.6rem;
     font-weight: 300;
 }
-.action {
+.actions {
     background-color: #f7f7f7;
     border-bottom: 1px solid #dedfe0;
     padding: 0.8rem;
 }
-.action-container {
+.actions-container {
     align-items: center;
     display: flex;
     max-width: 60rem;
@@ -49,7 +49,7 @@ a {
     min-height: 3rem;
     padding: 0 1.6rem;
 }
-.action-container--spaced {
+.actions-container--spaced {
     justify-content: space-around;
 }
 
