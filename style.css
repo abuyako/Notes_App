@@ -141,3 +141,7 @@ a {
     font-weight: 300;
     font-style: italic;
 }
+.empty-message {
+    text-align: center;
+    margin: 3.2rem 0;
+}
