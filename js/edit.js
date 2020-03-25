@@ -6,3 +6,7 @@ const bodyElement = document.querySelector('#note-body');
 const noteId = location.hash.substr(1);
 let notes = getSavedNotes();
 let note = notes.find((note) => note.id === noteId);
+
+if (!note) {
+    location.assign('./index.html');
+}
