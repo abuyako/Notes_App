@@ -10,3 +10,5 @@ let note = notes.find((note) => note.id === noteId);
 if (!note) {
     location.assign('./index.html');
 }
+
+//Get the existing note info from the page.
