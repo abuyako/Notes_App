@@ -71,3 +71,26 @@ a {
     height: 3rem;
     margin-right: .8rem;
 }
+.button {
+    background: #43799c;
+    border: none;
+    border-bottom: 2px solid #396684;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease;
+}
+
+.button:hover {
+    background: #396684;
+}
+
+.button--secondary {
+    background: #888888;
+    border-bottom: 2px solid #717171;
+}
+
+.button--secondary:hover {
+    background: #6E6E6E;
+}
