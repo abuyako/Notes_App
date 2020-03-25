@@ -94,3 +94,13 @@ a {
 .button--secondary:hover {
     background: #6E6E6E;
 }
+
+.title-input {
+    border: 1px solid #DEDFE0;
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    margin: 2.4rem 0;
+    padding: .8rem;
+    width: 100%;
+}
