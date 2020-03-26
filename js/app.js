@@ -31,3 +31,10 @@ document.querySelector('#filter-by').addEventListener('change', (e) => {
     filters.sortBy = e.target.value;
     renderNotes(notes, filters);
 });
+
+window.addEventListener('storage', (e) => {
+    if (e.key === 'notes'){
+        notes = JSON.parse(e.newValue);
+        renderNotes(notes, filters);
+    }
+})
