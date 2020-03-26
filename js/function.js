@@ -10,3 +10,8 @@ const getSavedNotes = () => {
         return [];
     }
 }
+
+// save notes to localstorage 
+const saveNotes = (notes) => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+}
