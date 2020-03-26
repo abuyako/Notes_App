@@ -30,4 +30,13 @@ const generateNoteDOM = (note) => {
     const noteEl = document.createElement('a');
     const textEl = document.createElement('p');
     const statusEl = document.createElement('p');
+
+    // Setupe the note title text
+    if (note.title.length > 0){
+        textEl.textContent = note.title;
+    }else {
+        textEl.textContent = 'Unnamed note';
+    }
+    textEl.classList.add('list-item__title')
+    noteEl.appendChild(textEl);
 }
