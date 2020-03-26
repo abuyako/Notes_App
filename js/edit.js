@@ -15,3 +15,17 @@ if (!note) {
 timeElement.textContent = generateLastEdited(note.updatedAt);
 titleElement.value = note.title;
 bodyElement.value = note.body;
+
+titleElement.addEventListener('input', () => {
+    note.title = titleElement.value;
+    note.updatedAt = moment().valueOf();
+    timeElement.textContent = generateLastEdited(note.updatedAt);
+    saveNotes(notes);
+})
+
+bodyElement.addEventListener('input', () => {
+    note.body = bodyElement.value;
+    note.updatedAt = moment().valueOf();
+    timeElement.textContent = generateLastEdited(note.updatedAt);
+    saveNotes(notes);
+})
