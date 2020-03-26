@@ -39,4 +39,8 @@ const generateNoteDOM = (note) => {
     }
     textEl.classList.add('list-item__title')
     noteEl.appendChild(textEl);
+
+    // Setup the link
+    noteEl.setAttribute('href', `./edit.html#${note.id}`)
+    noteEl.classList.add('list-item')
 }
