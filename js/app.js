@@ -8,3 +8,16 @@ const filters = {
 renderNotes(notes, filters);
 
 'use strict'
+
+document.querySelector('#create-note').addEventListener('click', () => {
+    const id = uuidv4();
+    notes.push({
+        id: id,
+        title: '',
+        body: '',
+        createdAt: timeStamp,
+        updatedAt: timeStamp,
+    });
+    saveNotes(notes);
+    location.assign(`./edit.html#${id}`);
+})
