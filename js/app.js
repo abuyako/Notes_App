@@ -6,3 +6,5 @@ const filters = {
 };
 
 renderNotes(notes, filters);
+
+'use strict'
