@@ -12,3 +12,6 @@ if (!note) {
 }
 
 //Get the existing note info from the page.
+timeElement.textContent = generateLastEdited(note.updatedAt);
+titleElement.value = note.title;
+bodyElement.value = note.body;
