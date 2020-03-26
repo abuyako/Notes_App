@@ -29,3 +29,9 @@ bodyElement.addEventListener('input', () => {
     timeElement.textContent = generateLastEdited(note.updatedAt);
     saveNotes(notes);
 })
+
+document.querySelector('#remove-note').addEventListener('click', () => {
+    removeNote(note.id);
+    saveNotes(notes);
+    location.assign('./index.html');
+})
