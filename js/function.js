@@ -24,3 +24,10 @@ const removeNote = (id) => {
         notes.splice(index,1);
     }
 }
+
+// Generate the DOM structure for a note
+const generateNoteDOM = (note) => {
+    const noteEl = document.createElement('a');
+    const textEl = document.createElement('p');
+    const statusEl = document.createElement('p');
+}
