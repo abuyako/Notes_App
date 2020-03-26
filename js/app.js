@@ -20,4 +20,10 @@ document.querySelector('#create-note').addEventListener('click', () => {
     });
     saveNotes(notes);
     location.assign(`./edit.html#${id}`);
+});
+
+document.querySelector('#search-text').addEventListener('input', (e) => {
+    filters.searchText = e.target.value;
+    renderNotes(notes, filters);
 })
+
