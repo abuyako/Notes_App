@@ -87,3 +87,28 @@ const sortNotes = (notes, sortBy) => {
         return notes;
     }
 }
+
+// Render application notes
+const renderNotes = (notes, filters) => {
+    const notesEl = document.querySelector('#notes');
+    notes = sortNotes(notes, filters.sortBy);
+    const filteredNotes = notes.filter((note) => {
+        const title = note.title.toLowerCase();
+        const filter = filters.searchText.toLowerCase();
+        return title.includes(filter) // || body.includes(filter);
+    })
+
+    notesEl.innerHTML = '';
+
+    if (filteredNotes.length > 0){
+        filteredNotes.forEach( (note) => {
+            const p = generateNoteDOM(note);
+            notesEl.appendChild(p);
+        })
+    } else {
+        const emptyMessage = document.createdElement('p');
+        emptyMessage.textContent = 'No notes to show';
+        emptyMessage.classList.add('empty-message');
+        notesEl.appendChild(emptyMessage);
+    }
+};
