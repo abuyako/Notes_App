@@ -51,3 +51,39 @@ const generateNoteDOM = (note) => {
 
     return noteEl;
 }
+
+const sortNotes = (notes, sortBy) => {
+    if (sortBy === 'byEdited'){
+        return notes.sort((a,b) => {
+            if (a.updateAt > b.updateAt){
+                return -1;
+            } else if (a.updateAt < b.updateAt){
+                return 1;
+            } else {
+                return 0;
+            }
+        })
+    } else if (sortBy === 'byCreated') {
+        return notes.sort((a,b) => {
+            if (a.createAt > b.createAt){
+                return -1;
+            } else if (a.createAt < b.createAt){
+                return 1;
+            } else {
+                return 0;
+            }
+        })
+    } else if (sortBy === 'alphabetical'){
+        return notes.sort((a,b) => {
+            if (a.title.toLowerCase() < b.title.toLowerCase()){
+                return -1;
+            } else if (a.title.toLowerCase() > b.title.toLowerCase()){
+                return 1;
+            } else {
+                return 0;
+            }
+        })
+    }else {
+        return notes;
+    }
+}
