@@ -41,7 +41,7 @@ a {
     border-bottom: 1px solid #dedfe0;
     padding: 0.8rem;
 }
-.actions-container {
+.actions__container {
     align-items: center;
     display: flex;
     max-width: 60rem;
@@ -49,7 +49,7 @@ a {
     min-height: 3rem;
     padding: 0 1.6rem;
 }
-.actions-container--spaced {
+.actions__container--spaced {
     justify-content: space-around;
 }
 
