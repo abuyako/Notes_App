@@ -117,6 +117,7 @@
                 ((e = "binary" === r ? new Array(16) : null), (r = null)),
                 (r = r || {});
               var f = r.random || (r.rng || o)();
+              
               if (((f[6] = (15 & f[6]) | 64), (f[8] = (63 & f[8]) | 128), e))
                 for (var u = 0; u < 16; ++u) e[t + u] = f[u];
               return e || i(f);
