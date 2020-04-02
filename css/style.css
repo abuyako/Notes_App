@@ -59,7 +59,9 @@ a {
     /* justify-content: space-around; */
     margin-left: 500px;
 }
-
+.actions__container--spaced a {
+    margin-right: 200px;
+}
 .input {
     border: 1px solid #DEDFE0;
     border-radius: 5px;
